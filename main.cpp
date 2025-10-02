@@ -1,8 +1,14 @@
+// Колосов Егор
+// Kolosov Egor
+// M8o-212BV-24
+// 10 10 2025
+// LABA 3
+
 #include <iostream>
 #include <vector>
 #include <cmath>
 
-class Figure {
+class Figure { // создаем класс
 public:
     virtual ~Figure() = default;
     virtual std::pair<double, double> center() const = 0;
@@ -15,7 +21,7 @@ std::ostream& operator<<(std::ostream& os, const Figure& fig) {
     return os;
 }
 
-// === Pentagon ===
+// пятиугольник класс
 class Pentagon : public Figure {
 private:
     double x[5], y[5];
@@ -69,7 +75,7 @@ public:
     }
 };
 
-// === Hexagon ===
+// шестиугольник класс
 class Hexagon : public Figure {
 private:
     double x[6], y[6];
@@ -123,7 +129,7 @@ public:
     }
 };
 
-// === Octagon ===
+// восьмиугольник класс
 class Octagon : public Figure {
 private:
     double x[8], y[8];
@@ -177,7 +183,7 @@ public:
     }
 };
 
-// === operator>> для Figure* ===
+// оператор будет здесь
 std::istream& operator>>(std::istream& is, Figure*& fig) {
     int type;
     is >> type;
@@ -214,21 +220,21 @@ int main() {
             figures.push_back(fig);
         }
     }
-
-    // Вывод центров и площадей
+// 2132314
+    // мы выведем центр и площади ниже
     for (auto* f : figures) {
         std::cout << "Center: " << f->center().first << ", " << f->center().second << std::endl;
         std::cout << "Area: " << static_cast<double>(*f) << std::endl;
     }
 
-    // Общая площадь
+    // алощадь
     double total_area = 0;
     for (auto* f : figures) {
         total_area += static_cast<double>(*f);
     }
     std::cout << "Total area: " << total_area << std::endl;
 
-    // Удаление фигуры по индексу
+    // удалим
     int idx;
     std::cout << "Enter index to remove: ";
     std::cin >> idx;
@@ -237,7 +243,7 @@ int main() {
         figures.erase(figures.begin() + idx);
     }
 
-    // Очистка памяти
+    // делитаем чтобы фришнуть память
     for (auto* f : figures) {
         delete f;
     }
