@@ -207,10 +207,10 @@ std::istream& operator>>(std::istream& is, Figure*& fig) {
     return is;
 }
 
-int main() {
-    std::vector<Figure*> figures;
+int main() { // 12323131213
+    std::vector<Figure*> figures; //23 222332
     int n;
-    std::cout << "Enter number of figures: ";
+    std::cout << "введите количество фигур: ";
     std::cin >> n;
 
     for (int i = 0; i < n; ++i) {
@@ -223,8 +223,8 @@ int main() {
 // 2132314
     // мы выведем центр и площади ниже
     for (auto* f : figures) {
-        std::cout << "Center: " << f->center().first << ", " << f->center().second << std::endl;
-        std::cout << "Area: " << static_cast<double>(*f) << std::endl;
+        std::cout << "центр: " << f->center().first << ", " << f->center().second << std::endl;
+        std::cout << "площадь: " << static_cast<double>(*f) << std::endl;
     }
 
     // алощадь
@@ -232,11 +232,11 @@ int main() {
     for (auto* f : figures) {
         total_area += static_cast<double>(*f);
     }
-    std::cout << "Total area: " << total_area << std::endl;
+    std::cout << "итоговая площадь: " << total_area << std::endl;
 
     // удалим
     int idx;
-    std::cout << "Enter index to remove: ";
+    std::cout << "введите что-то для выхода: ";
     std::cin >> idx;
     if (idx >= 0 && idx < figures.size()) {
         delete figures[idx];
