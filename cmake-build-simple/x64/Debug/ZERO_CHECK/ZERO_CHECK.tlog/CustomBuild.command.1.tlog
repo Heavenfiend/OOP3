@@ -1,0 +1,10 @@
+^C:\OOP2\OOP\CMAKE-BUILD-SIMPLE\CMAKEFILES\4EDCCC9F17938C0470DF55413C0397BA\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/OOP2/OOP -BC:/OOP2/OOP/cmake-build-simple --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/OOP2/OOP/cmake-build-simple/FiguresManagement.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
