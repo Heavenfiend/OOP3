@@ -98,3 +98,22 @@ void Hexagon::createRegularHexagon(double centerX, double centerY, double radius
         y[i] = centerY + radius * sin(angle);
     }
 }
+
+std::ostream& operator<<(std::ostream& os, const Hexagon& hex) {
+    os << "Hexagon vertices: ";
+    for(int i = 0; i < 6; i++) {
+        os << "(" << std::fixed << std::setprecision(2)
+           << hex.x[i] << ", " << hex.y[i] << ")";
+        if(i < 5) os << " ";
+    }
+    return os;
+}
+
+std::istream& operator>>(std::istream& is, Hexagon& hex) {
+    std::cout << "Enter 6 vertices for Hexagon (x y format):" << std::endl;
+    for(int i = 0; i < 6; i++) {
+        std::cout << "Vertex " << (i+1) << ": ";
+        is >> hex.x[i] >> hex.y[i];
+    }
+    return is;
+}

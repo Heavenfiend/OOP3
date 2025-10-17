@@ -24,7 +24,10 @@ public:
     // операторы
     Hexagon& operator=(const Hexagon& other);
     bool operator==(const Hexagon& other);
-    
+
+    friend std::ostream& operator<<(std::ostream& os, const Hexagon& hex);
+    friend std::istream& operator>>(std::istream& is, Hexagon& hex);
+
     // дополнительная функция для создания правильного шестиугольника
     void createRegularHexagon(double centerX, double centerY, double radius);
 };
