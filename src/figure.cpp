@@ -1,3 +1,6 @@
+// Made bu Egor 24/10/25
+//
+//
 #include "figure.h"
 
 std::ostream& operator<<(std::ostream& os, const Figure& fig) {

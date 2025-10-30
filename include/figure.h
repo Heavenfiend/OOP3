@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <vector>
-#include <utility> // std::pair
+#include <utility>
 
 typedef std::pair<double, double> Point;
 

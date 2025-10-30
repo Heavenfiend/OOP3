@@ -1,3 +1,6 @@
+// Made bu Egor 24/10/25
+//
+//
 #ifndef PENTAGON_H
 #define PENTAGON_H
 

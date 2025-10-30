@@ -1,3 +1,6 @@
+// Made bu Egor 24/10/25
+//
+//
 #include "octagon.h"
 #include <cmath>
 

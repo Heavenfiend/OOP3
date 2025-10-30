@@ -1,3 +1,6 @@
+// Made bu Egor 24/10/25
+//
+//
 #include <gtest/gtest.h>
 #include "pentagon.h"
 #include "hexagon.h"
